@@ -1,7 +1,7 @@
 export function NavLink({ text, href, page }) {
     return (
         <a href={href}>
-            <div className="mx-8">
+            <div className="mx-8 sm:block hidden">
 
                 <style>
                     {"\

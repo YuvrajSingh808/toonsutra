@@ -1,11 +1,11 @@
 import LandingPage from "./pages/LandingPage"
 import Library from "./pages/Library";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </Router>
