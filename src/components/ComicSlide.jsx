@@ -29,7 +29,7 @@ export default function ComicSlide( ) {
             <p className="text-center text-md underline">
                 <a href="/#"> Learn More</a>
             </p>
-            <div className="sm:block mx-auto bg-gradient-to-r to-[#DA6732] from-[#D93B47] py-2 my-4 px-11 rounded-full hover:scale-105 transition-all hover:shadow-md w-1/5">
+            <div className="sm:block mx-auto bg-gradient-to-r to-[#DA6732] from-[#D93B47] py-2 my-4 sm:px-11 px-4 rounded-full hover:scale-105 transition-all hover:shadow-md sm:w-1/5 w-2/3 text-center">
                 <p className=' text-backgroundPrimary font-medium'>Toonsutra coming soon</p>
             </div>
         </>

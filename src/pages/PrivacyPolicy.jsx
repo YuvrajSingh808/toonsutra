@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import { NavBar } from "../components/NavBar";
 
 export default function PrivacyPolicy() {
@@ -44,7 +45,7 @@ export default function PrivacyPolicy() {
                 <Heading text={"Notice of Changes to the Privacy Policy"} />
                 <Paragraph text={"We may update this Privacy Policy from time to time. If we do, we will update the “Last Updated” date at the bottom of the Privacy Policy. If we make material changes to how we use personal information, we will attempt to notify you of the change and to give you the opportunity to exercise choice as to how your personal information is used. For all changes to this Privacy Policy, we will post the updated Privacy Policy on Toonsutra app or website. We encourage you to review this Privacy Policy periodically to stay informed about our collection, use and disclosure of personal information."} />
             </div>
-            <div className="h-20"></div>
+            <Footer />
         </div>
     );
 }
