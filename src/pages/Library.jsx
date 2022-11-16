@@ -31,7 +31,7 @@ export default function Library() {
             if(i===0){
                 comicCard.push(<PreviewCard title={comicList[publisher][i][0]} description={comicList[publisher][i+1]} coverImage="5.png"/>)
             }
-            comicCard.push(<ComicCard coverImage="5.png" />);
+            else comicCard.push(<ComicCard coverImage="5.png" />);
         }
         setComics(comicCard);
     }
@@ -73,14 +73,17 @@ export default function Library() {
         <div className="div">
             <NavBar currentPage={"Library"} />
             <div className="flex place-content-center ">
-                <div className="hidden md:block">
+                <div className="hidden sm:block">
                     <button className="text-black hover:text-white px-2 pl-4 py-2 bg-zinc-400 rounded-l-full" onClick={()=>handleChange("Graphic India")}><p className={highlist[0] ? "font-bold" : ""}>Graphic India</p></button>
                     <button className="text-black hover:text-white px-2 py-2 bg-zinc-400 " onClick={()=>handleChange("Liquid Comics")}><p className={highlist[1] ? "font-bold" : ""}>Liquid Comics</p></button>
                     <button className="text-black hover:text-white px-2 pr-4 py-2 bg-zinc-400 rounded-r-full" onClick={()=>handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
                 </div>
+                <div className="block sm:hidden">
+                
+                </div>
             </div>
             <div className="flex flex-col place-content-center">
-                <div className="grid md:grid-cols-6 sm:grid-cols-2 md:gap-10 sm:gap-5 px-16 py-10">
+                <div className="grid sm:grid-cols-6 grid-cols-2 sm:gap-10 gap-5 sm:px-16 sm:py-10 px-4 py-4">
                     {comics.map((comic, index) => {
                         return (
                             <>

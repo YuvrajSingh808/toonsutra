@@ -66,3 +66,7 @@
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
