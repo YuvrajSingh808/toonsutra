@@ -1,4 +1,5 @@
 import { Banner } from '../components/Banner';
+import Footer from '../components/Footer';
 import MeetTheTeam from '../components/MeetTheTeam';
 import MeetToonsutra from '../components/MeetToonsutra';
 import News from '../components/News';
@@ -11,6 +12,7 @@ export default function LandingPage() {
             <Webtoons />
             <MeetTheTeam />
             <News />
+            <Footer />
         </div>
     );
 }
