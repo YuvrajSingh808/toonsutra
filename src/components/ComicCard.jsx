@@ -1,7 +1,7 @@
-export default function ComicCard({ comic }) {
+export default function ComicCard( props ) {
   return (
-    <div className="">
-        <img src={comic.coverImage} alt="cover" className="rounded-lg" />
+    <div>
+        <img src={require(`../assets/comics/${props.coverImage}`)} alt="cover"/>
     </div>
   )
 }
