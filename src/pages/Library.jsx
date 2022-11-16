@@ -79,7 +79,7 @@ export default function Library() {
                     <button className="text-black hover:text-white px-2 pr-4 py-2 bg-zinc-400 rounded-r-full" onClick={()=>handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
                 </div>
                 <div className="block sm:hidden">
-                
+                    
                 </div>
             </div>
             <div className="flex flex-col place-content-center">
