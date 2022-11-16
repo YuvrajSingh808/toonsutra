@@ -1,37 +1,95 @@
 import { NavBar } from "../components/NavBar";
-import Comic from "../models/Comic";
 import ComicCard from "../components/ComicCard";
-
-function readCSV() {
-    const csv = require("csvtojson");
-    const comics = csv().fromFile("../assets/Website-Metadata.csv");
-    // const graphicIndiaComics = [];
-    // const liquidComics = [];
-    // const valiantComics = [];
-    // for (let i = 0; i < rows.length; i++) {
-    //     // const row = rows[i];
-    //     const columns = row.split(",");
-    //     const comic = new Comic(columns[0], columns[1], columns[2], columns[3], columns[4]);
-    //     if (comic.publisher === "Graphic India") {
-    //         graphicIndiaComics.push(comic);
-    //     } else if (comic.publisher === "Liquid Comics") {
-    //         liquidComics.push(comic);
-    //     } else if (comic.publisher === "Valiant Comics") {
-    //         valiantComics.push(comic);
-    //     }
-    // }
-    // graphicIndiaComics[0].coverImage = require("../assets/android.png");
-    return comics;
+import CSVFile from "../assets/Website-Metadata.csv";
+import Papa from "papaparse";
+import {useState, useEffect, useRef} from 'react';
+import PreviewCard from "../components/PreviewCard";
+import Footer from "../components/Footer";
+var comicList = {
+    "Graphic India": [],
+    "Liquid Comics": [],
+    "Valiant Comics": [],
 }
 
+
 export default function Library() {
-    // const comics = readCSV();
+    const ref = useRef(null);
+    const [comics, setComics] = useState([]);
+    const [publisher, setPublisher] = useState("Graphic India");
+    const [highlist, setHighlist] = useState([true, false, false]);
+    useEffect(() => {
+        readCSV();
+    }, []);
+
+    const handleChange = (publisher) => {
+        setPublisher(publisher);
+        if(publisher === "Graphic India") setHighlist([true, false, false]);
+        else if(publisher === "Liquid Comics") setHighlist([false, true, false]);
+        else setHighlist([false, false, true]);
+        var comicCard = [];
+        for (var i = 0; i < comicList[publisher].length; i+=2) {
+            if(i===0){
+                comicCard.push(<PreviewCard title={comicList[publisher][i][0]} description={comicList[publisher][i+1]} coverImage="5.png"/>)
+            }
+            comicCard.push(<ComicCard coverImage="5.png" />);
+        }
+        setComics(comicCard);
+    }
+
+    const parseData = (data) => {
+        for(let i =0; i < data.length; i++){
+            comicList[data[i].PUBLISHER].push([data[i].TITLE], Object.values(data[i])[2]);
+        }
+        handleChange("Graphic India");
+    }
+
+    const handlePreview = (index) => {
+        index*=2;
+        var tempTitle = comicList[publisher][0][0];
+        var tempDescription = comicList[publisher][1];
+        comicList[publisher][0][0] = comicList[publisher][index][0];
+        comicList[publisher][1] = comicList[publisher][index+1];
+        comicList[publisher][index][0] = tempTitle;
+        comicList[publisher][index+1] = tempDescription;
+        handleChange(publisher);
+        ref.current?.scrollIntoView({ behavior: 'smooth' });    
+    }
+
+    const readCSV = () => {
+        fetch(CSVFile)
+            .then(r => r.text())
+            .then(text => {
+                Papa.parse(text, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function (results) {
+                        parseData(results.data);
+                    },
+                });
+        });
+    }
+
     return (
         <div className="div">
             <NavBar currentPage={"Library"} />
-            <div className="grid grid-cols-4 gap-4 px-16 py-10">
-                {/* <ComicCard comic={graphicIndiaComics[0]} /> */}
+            <div className="flex place-content-center ">
+                <div className="hidden md:block">
+                    <button className="text-black hover:text-white px-2 pl-4 py-2 bg-zinc-400 rounded-l-full" onClick={()=>handleChange("Graphic India")}><p className={highlist[0] ? "font-bold" : ""}>Graphic India</p></button>
+                    <button className="text-black hover:text-white px-2 py-2 bg-zinc-400 " onClick={()=>handleChange("Liquid Comics")}><p className={highlist[1] ? "font-bold" : ""}>Liquid Comics</p></button>
+                    <button className="text-black hover:text-white px-2 pr-4 py-2 bg-zinc-400 rounded-r-full" onClick={()=>handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
+                </div>
             </div>
+            <div className="flex flex-col place-content-center">
+                <div className="grid md:grid-cols-6 sm:grid-cols-2 md:gap-10 sm:gap-5 px-16 py-10">
+                    {comics.map((comic, index) => {
+                        return (
+                            <>
+                                {index === 0 ? <div className="md:row-span-2 md:col-span-2" ref={ref}>{comic}</div> : <div onClick={()=>handlePreview(index)}>{comic}</div>}
+                            </>
+                    )})}
+                </div>
+            </div>
+            <div className="sticky"><Footer /></div>
         </div>
     );
 }
