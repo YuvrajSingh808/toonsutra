@@ -23,9 +23,7 @@ export default function Library(props) {
     }, []);
 
     const handleChange = (pub) =>{
-        console.log(pub);
         setPublisher(pub);
-        console.log(publisher);
         preview.pop();
         preview.pop();
         preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
@@ -112,8 +110,8 @@ export default function Library(props) {
             <NavBar currentPage={"Library"} />
             <div className="flex place-content-center mt-8">
                 <div className="hidden sm:block">
-                    <button className="text-[#021028] text-[30px] hover:font-medium pr-[79px] pl-[67px] py-2 bg-[#E8E8E8] rounded-l-full" onClick={() => handleChange("Graphic India")}><p className={highlist[0] ? "font-medium" : ""}>Graphic India</p></button>
-                    <button className="text-[#021028] text-[30px] hover:font-medium py-2 bg-[#E8E8E8] " onClick={() => handleChange("Liquid Comics")}><p className={highlist[1] ? "font-medium" : ""}>Liquid Comics</p></button>
+                    <button className="text-[#021028] text-[30px] hover:font-medium pr-[79px] pl-[67px] py-2 bg-[#E8E8E8] rounded-l-full" onClick={() => {handleChange("Graphic India")}}><p className={highlist[0] ? "font-medium" : ""}>Graphic India</p></button>
+                    <button className="text-[#021028] text-[30px] hover:font-medium py-2 bg-[#E8E8E8] " onClick={() => {handleChange("Liquid Comics")}}><p className={highlist[1] ? "font-medium" : ""}>Liquid Comics</p></button>
                     <button className="text-[#021028] text-[30px] hover:font-medium pl-[79px] pr-[67px] px-2 py-2 bg-[#E8E8E8] rounded-r-full" onClick={() => handleChange("Valiant Comics")}><p className={highlist[2] ? "font-medium" : ""}>Valiant Comics</p></button>
                 </div>
                 <div className="sm:hidden flex w-full justify-end px-4">
