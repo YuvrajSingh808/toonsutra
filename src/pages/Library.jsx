@@ -15,6 +15,7 @@ var comicList = {
 export default function Library(props) {
     const ref = useRef(null);
     const [comics, setComics] = useState([]);
+    const [preview, setPreview] = useState([]);
     const [publisher, setPublisher] = useState("Graphic India");
     const [highlist, setHighlist] = useState([true, false, false]);
     useEffect(() => {
@@ -40,14 +41,13 @@ export default function Library(props) {
             if (i === 0) {
                 comicCard.push(
                     <PreviewCard
-                        title={comicList[publisher][i][0]}
-                        description={comicList[publisher][i + 1]}
+                        title={preview[0]}
+                        description={preview[i + 1]}
                         publisher={publisher.replace(/\s+/g, '')}
-                        coverImage={comicList[publisher][i][0].replace(/\s+/g, '')}
+                        coverImage={preview[0].replace(/\s+/g, '')}
                     />
                 )
             }
-            else
             comicCard.push(<ComicCard publisher={publisher.replace(/\s+/g, '')} coverImage={comicList[publisher][i][0].replace(/\s+/g, '')} />)
         }
         setComics(comicCard);
@@ -61,17 +61,19 @@ export default function Library(props) {
             }
             comicList[data[i].PUBLISHER].push([data[i].TITLE], Object.values(data[i])[2]);
         }
+        preview.pop();
+        preview.pop();
+        preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
+        setPreview(preview);
         handleChange("Graphic India");
     }
 
     const handlePreview = (index) => {
         index *= 2;
-        var tempTitle = comicList[publisher][0][0];
-        var tempDescription = comicList[publisher][1];
-        comicList[publisher][0][0] = comicList[publisher][index][0];
-        comicList[publisher][1] = comicList[publisher][index + 1];
-        comicList[publisher][index][0] = tempTitle;
-        comicList[publisher][index + 1] = tempDescription;
+        preview.pop();
+        preview.pop();
+        preview.push(comicList[publisher][index-2][0], comicList[publisher][index -1]);   
+        setPreview(preview);
         handleChange(publisher);
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
@@ -97,9 +99,9 @@ export default function Library(props) {
             <NavBar currentPage={"Library"} />
             <div className="flex place-content-center mt-8">
                 <div className="hidden sm:block">
-                    <button className="text-black hover:font-bold px-2 pl-4 py-2 bg-[#E8E8E8] rounded-l-full" onClick={() => handleChange("Graphic India")}><p className={highlist[0] ? "font-bold" : ""}>Graphic India</p></button>
-                    <button className="text-black hover:font-bold px-2 py-2 bg-[#E8E8E8] " onClick={() => handleChange("Liquid Comics")}><p className={highlist[1] ? "font-bold" : ""}>Liquid Comics</p></button>
-                    <button className="text-black hover:font-bold px-2 pr-4 py-2 bg-[#E8E8E8] rounded-r-full" onClick={() => handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
+                    <button className="text-[#021028] text-[30px] hover:font-medium pr-[79px] pl-[67px] py-2 bg-[#E8E8E8] rounded-l-full" onClick={() => handleChange("Graphic India")}><p className={highlist[0] ? "font-medium" : ""}>Graphic India</p></button>
+                    <button className="text-[#021028] text-[30px] hover:font-medium py-2 bg-[#E8E8E8] " onClick={() => handleChange("Liquid Comics")}><p className={highlist[1] ? "font-medium" : ""}>Liquid Comics</p></button>
+                    <button className="text-[#021028] text-[30px] hover:font-medium pl-[79px] pr-[67px] px-2 py-2 bg-[#E8E8E8] rounded-r-full" onClick={() => handleChange("Valiant Comics")}><p className={highlist[2] ? "font-medium" : ""}>Valiant Comics</p></button>
                 </div>
                 <div className="sm:hidden flex w-full justify-end px-4">
                     <div class="dropdown inline-block relative z-50">
