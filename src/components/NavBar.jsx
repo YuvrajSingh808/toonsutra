@@ -35,7 +35,7 @@ function NavBarSmallScreen() {
     function toggleButton() {
     }
     return (
-        <>
+        <div>
             <header className="w-full sticky top-0 left-0 p-2 flex z-20">
                 {/* Logo */}
                 <div className="text-white flex-grow z-20">
@@ -93,6 +93,6 @@ function NavBarSmallScreen() {
                     </li>
                 </ul>
             </nav>
-        </>
+        </div>
     );
 }
