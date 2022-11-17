@@ -59,6 +59,9 @@ export default function Library(props) {
             if (data[i].TITLE.includes(":")) {
                 data[i].TITLE = data[i].TITLE.replace(":", "");
             }
+            else if(data[i].TITLE.includes('"')){
+                data[i].TITLE = data[i].TITLE.replace('"', "");
+            }
             comicList[data[i].PUBLISHER].push([data[i].TITLE], Object.values(data[i])[2]);
         }
         preview.pop();
