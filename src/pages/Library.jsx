@@ -10,7 +10,7 @@ var comicList = {
     "Liquid Comics": [],
     "Valiant Comics": [],
 }
-
+// var publisher = "Graphic India";
 
 export default function Library(props) {
     const ref = useRef(null);
@@ -26,17 +26,17 @@ export default function Library(props) {
         setPublisher(pub);
         preview.pop();
         preview.pop();
-        preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
+        preview.push(comicList[pub][0][0], comicList[pub][1]);   
         setPreview(preview);
-        renderCards();
+        renderCards(pub);
     }
 
-    const renderCards = () => {
-        if (publisher === "Graphic India") {
+    const renderCards = (pub) => {
+        if (pub === "Graphic India") {
             setHighlist([true, false, false]);
             changeSelected("Graphic India");
         }
-        else if (publisher === "Liquid Comics") {
+        else if (pub === "Liquid Comics") {
             setHighlist([false, true, false]);
             changeSelected("Liquid Comics");
         }
@@ -45,18 +45,18 @@ export default function Library(props) {
             changeSelected("Valiant Comics");
         }
         var comicCard = [];
-        for (var i = 0; i < comicList[publisher].length; i += 2) {
+        for (var i = 0; i < comicList[pub].length; i += 2) {
             if (i === 0) {
                 comicCard.push(
                     <PreviewCard
                         title={preview[0]}
                         description={preview[i + 1]}
-                        publisher={publisher.replace(/\s+/g, '')}
+                        publisher={pub.replace(/\s+/g, '')}
                         coverImage={preview[0].replace(/\s+/g, '')}
                     />
                 )
             }
-            comicCard.push(<ComicCard publisher={publisher.replace(/\s+/g, '')} coverImage={comicList[publisher][i][0].replace(/\s+/g, '')} />)
+            comicCard.push(<ComicCard publisher={pub.replace(/\s+/g, '')} coverImage={comicList[pub][i][0].replace(/\s+/g, '')} />)
         }
         setComics(comicCard);
     }
@@ -76,7 +76,7 @@ export default function Library(props) {
         preview.pop();
         preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
         setPreview(preview);
-        renderCards();
+        renderCards("Graphic India");
     }
 
     const handlePreview = (index) => {
@@ -85,7 +85,7 @@ export default function Library(props) {
         preview.pop();
         preview.push(comicList[publisher][index-2][0], comicList[publisher][index -1]);   
         setPreview(preview);
-        renderCards();
+        renderCards(publisher);
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
