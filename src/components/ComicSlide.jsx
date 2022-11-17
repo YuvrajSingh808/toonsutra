@@ -7,15 +7,8 @@ export default function ComicSlide( ) {
                     Here's a limited preview of the vast online library on Toonsutra
                 </p>
             </div>
-            <div className=" w-4/5 mx-auto flex flex-nowrap overflow-x-scroll py-6">
+            <div className=" w-full mx-auto flex flex-nowrap overflow-auto py-6">
                 <div className="flex items-center justify-center">
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
                     <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
                     <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
                     <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
