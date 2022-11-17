@@ -22,8 +22,18 @@ export default function Library(props) {
         readCSV();
     }, []);
 
-    const handleChange = (publisher) => {
-        setPublisher(publisher);
+    const handleChange = (pub) =>{
+        console.log(pub);
+        setPublisher(pub);
+        console.log(publisher);
+        preview.pop();
+        preview.pop();
+        preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
+        setPreview(preview);
+        renderCards();
+    }
+
+    const renderCards = () => {
         if (publisher === "Graphic India") {
             setHighlist([true, false, false]);
             changeSelected("Graphic India");
@@ -68,7 +78,7 @@ export default function Library(props) {
         preview.pop();
         preview.push(comicList[publisher][0][0], comicList[publisher][1]);   
         setPreview(preview);
-        handleChange("Graphic India");
+        renderCards();
     }
 
     const handlePreview = (index) => {
@@ -77,7 +87,7 @@ export default function Library(props) {
         preview.pop();
         preview.push(comicList[publisher][index-2][0], comicList[publisher][index -1]);   
         setPreview(preview);
-        handleChange(publisher);
+        renderCards();
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
