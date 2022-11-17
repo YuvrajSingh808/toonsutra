@@ -38,15 +38,27 @@ export default function Library(props) {
         var comicCard = [];
         for (var i = 0; i < comicList[publisher].length; i += 2) {
             if (i === 0) {
-                comicCard.push(<PreviewCard title={comicList[publisher][i][0]} description={comicList[publisher][i + 1]} coverImage="5.png" />)
+                comicCard.push(
+                    <PreviewCard
+                        title={comicList[publisher][i][0]}
+                        description={comicList[publisher][i + 1]}
+                        publisher={publisher.replace(/\s+/g, '')}
+                        coverImage={comicList[publisher][i][0].replace(/\s+/g, '')}
+                    />
+                )
             }
-            else comicCard.push(<ComicCard coverImage="5.png" />);
+            else
+            comicCard.push(<ComicCard publisher={publisher.replace(/\s+/g, '')} coverImage={comicList[publisher][i][0].replace(/\s+/g, '')} />)
         }
         setComics(comicCard);
     }
 
     const parseData = (data) => {
         for (let i = 0; i < data.length; i++) {
+            // if title contains ":" then remove it
+            if (data[i].TITLE.includes(":")) {
+                data[i].TITLE = data[i].TITLE.replace(":", "");
+            }
             comicList[data[i].PUBLISHER].push([data[i].TITLE], Object.values(data[i])[2]);
         }
         handleChange("Graphic India");
@@ -83,19 +95,19 @@ export default function Library(props) {
     return (
         <div className="div">
             <NavBar currentPage={"Library"} />
-            <div className="flex place-content-center ">
+            <div className="flex place-content-center mt-8">
                 <div className="hidden sm:block">
-                    <button className="text-black hover:text-white px-2 pl-4 py-2 bg-zinc-400 rounded-l-full" onClick={() => handleChange("Graphic India")}><p className={highlist[0] ? "font-bold" : ""}>Graphic India</p></button>
-                    <button className="text-black hover:text-white px-2 py-2 bg-zinc-400 " onClick={() => handleChange("Liquid Comics")}><p className={highlist[1] ? "font-bold" : ""}>Liquid Comics</p></button>
-                    <button className="text-black hover:text-white px-2 pr-4 py-2 bg-zinc-400 rounded-r-full" onClick={() => handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
+                    <button className="text-black hover:font-bold px-2 pl-4 py-2 bg-[#E8E8E8] rounded-l-full" onClick={() => handleChange("Graphic India")}><p className={highlist[0] ? "font-bold" : ""}>Graphic India</p></button>
+                    <button className="text-black hover:font-bold px-2 py-2 bg-[#E8E8E8] " onClick={() => handleChange("Liquid Comics")}><p className={highlist[1] ? "font-bold" : ""}>Liquid Comics</p></button>
+                    <button className="text-black hover:font-bold px-2 pr-4 py-2 bg-[#E8E8E8] rounded-r-full" onClick={() => handleChange("Valiant Comics")}><p className={highlist[2] ? "font-bold" : ""}>Valiant Comics</p></button>
                 </div>
                 <div className="sm:hidden flex w-full justify-end px-4">
                     <div class="dropdown inline-block relative z-50">
-                        <button class="flex items-center space-x-2">
-                            <span class={props.textColor + ` text-sm ${props.isSelected ? "font-bold" : "font-normal hover:text-gray-400 hover:text-base"}`}> {selected} </span>
+                        <button class="flex items-center space-x-2 bg-[#E8E8E8] px-4 py-1 rounded-md">
+                            <span class={props.textColor + ` text-[10px] ${props.isSelected ? "font-bold" : "font-normal hover:text-gray-400 "}`}> {selected} </span>
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
                         </button>
-                        <ul class=" w-40 dropdown-menu absolute hidden z-80 text-gray-700 pt-1 text-xs -ml-8 text-center mx-auto bg-gray-200">
+                        <ul class=" w-40 dropdown-menu absolute hidden z-80 text-[#000] pt-1 text-xs -ml-8 text-center mx-auto bg-[#E8E8E8]">
                             <button onClick={() => handleChange("Graphic India")} >
                                 <p class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
                                     Graphic India

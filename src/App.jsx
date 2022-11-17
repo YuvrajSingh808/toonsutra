@@ -11,7 +11,7 @@ import {
 export default function App() {
   return (
     <Router>
-      <div className="bg-backgroundPrimary font-Poppins text-textPrimary">
+      <div className="font-Poppins text-textPrimary">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/library" element={<Library />} />

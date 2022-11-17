@@ -2,10 +2,10 @@ import meetToon from '../assets/meetToon.svg';
 
 export default function MeetToonsutra() {
     return (
-        <div className="w-full flex sm:justify-end justify-center py-8 sm:h-screen">
-            <div className="flex sm:flex-row flex-col-reverse bg-[#EBEBEB] sm:w-[95%] w-11/12 rounded-l-lg justify-between">
+        <div className="w-full flex sm:justify-center justify-center py-8 sm:h-screen">
+            <div className="flex sm:flex-row flex-col-reverse bg-[#EBEBEB] sm:w-[96%] w-11/12 rounded-l-lg justify-between">
                 <div className="sm:w-3/5 flex flex-col justify-center items-center text-textPrimary">
-                    <h1 className="sm:text-[40px] text-[20px] font-medium mt-12">Meet Toonsutra</h1>
+                    <h1 className="sm:text-[40px] text-[20px] font-medium mt-8">Meet Toonsutra</h1>
                     <div className="sm:grid grid-cols-2 grid-rows-2 grid-flow-col sm:px-0 px-5">
                         <div className="flex flex-col">
                             <h1 className=' font-extralight sm:text-8xl text-6xl'>1.</h1>

@@ -2,14 +2,12 @@ import bannerImage from '../assets/banner.png';
 import phoneMock from '../assets/PhoneMockup.png';
 import ios from '../assets/ios.png';
 import android from '../assets/android.png';
-import { NavBar } from './NavBar';
 
 export function Banner() {
     return <div className=" sm:h-screen sm:w-full">
-        <div className="w-full h-full absolute z-10 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bannerImage})` }}></div>
+        <div className="w-full h-full absolute z-10 top-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${bannerImage})` }}></div>
         {/* <img src={bannerImage} alt="banner" className="" /> */}
         <div className="relative z-20 w-full">
-            <NavBar currentPage="Home" />
             <div className="flex sm:flex-row flex-col-reverse items-center sm:justify-center justify-between h-full sm:mt-0 mt-8 sm:px-16">
                 <div className="sm:w-1/2 flex flex-col sm:items-start items-center text-[#12181C] sm:px-16">
                     <p className=' font-extrabold sm:text-6xl text-2xl sm:normal-case uppercase text-center sm:text-left sm:w-full w-2/3 mt-8 sm:mt-0'>HOME OF THE INDIAN WEBTOON</p>

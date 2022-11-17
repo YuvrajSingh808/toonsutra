@@ -9,24 +9,29 @@ export default function ComicSlide( ) {
             </div>
             <div className=" w-4/5 mx-auto flex flex-nowrap overflow-x-scroll py-6">
                 <div className="flex items-center justify-center">
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
-                    <div className="px-2 w-64"> <ComicCard coverImage="5.png" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
+                    <div className="px-2 w-64"> <ComicCard coverImage="EmpireofBlood" publisher="GraphicIndia" /> </div>
                 </div>
             </div>
-            <p className="text-center text-xl py-4">
+            <p className="text-center text-xl py-4 ml-8">
                 And <b>hundreds</b> of titles like these
             </p>
-            <p className="text-center text-md underline">
+            <p className="text-center text-md underline mx-auto">
                 <a href="/#"> Learn More</a>
             </p>
             <div className="sm:block mx-auto bg-gradient-to-r to-[#DA6732] from-[#D93B47] py-2 my-4 sm:px-11 px-4 rounded-full hover:scale-105 transition-all hover:shadow-md sm:w-1/5 w-2/3 text-center">

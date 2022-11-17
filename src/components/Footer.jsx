@@ -5,7 +5,7 @@ import logo from '../assets/logo.svg';
 export default function Footer() {
     return (
         <>
-            <div className="bg-gray-400">
+            <div className="bg-[#D3D3D3] text-[#535353]">
                 <div className="flex flex-col items-center justify-center">
                     <div className="sm:hidden block bg-gradient-to-r to-[#DA6732] from-[#D93B47] py-2 mt-4 px-11 rounded-full hover:scale-105 transition-all hover:shadow-md">
                         <p className=' text-backgroundPrimary font-medium'>Download App</p>

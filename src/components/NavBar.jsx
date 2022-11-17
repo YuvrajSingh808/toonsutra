@@ -4,7 +4,7 @@ import { slide as Menu } from 'react-burger-menu';
 
 export function NavBar({ currentPage }) {
     return (
-        <div className="sm:py-5 py-2 w-full flex sm:px-16 items-center justify-between">
+        <div className="sm:py-5 py-2 w-full flex sm:px-16 items-center justify-between bg-backgroundPrimary sticky-top drop-shadow-sm">
             <div className="sm:items-center items-start flex">
                 <img src={Logo} alt="logo" className="w-44 sm:w-auto" />
                 <NavLink text="Home" href="/" page={currentPage} />
