@@ -36,41 +36,40 @@ function NavBarSmallScreen() {
     }
     return (
         <div>
-            <header className="w-full sticky top-0 left-0 p-2 flex z-20">
+            <header className="w-screen justify-between sticky top-0 left-0 p-2 flex z-40">
                 {/* Logo */}
-                <div className="text-white flex-grow z-20">
-                    <h1 className="text-2xl font-bold my-0">Logo</h1>
-                </div>
+                
+                <img src={Logo} alt="logo" className={navbarOpen ? "opacity-0" : "w-44 sm:w-auto"} />
                 {/* Hamburger Icon */}
                 <button
-                    className="sm:hidden flex top-0 right-0 z-20 relative w-10 h-10 text-primary focus:outline-none"
+                    className="sm:hidden flex top-0 right-0 z-50 relative w-10 h-10 text-primary focus:outline-none"
                     onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                     <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                         <span
-                            className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${navbarOpen ? "rotate-45 delay-200" : "-translate-y-1.5"
+                            className={`absolute h-0.5 w-5 bg-primary transform transition duration-300 ease-in-out ${navbarOpen ? "rotate-45 delay-200" : "-translate-y-1.5"
                                 }`}
                         ></span>
                         <span
-                            className={`absolute h-0.5 bg-white transform transition-all duration-200 ease-in-out ${navbarOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
+                            className={`absolute h-0.5 bg-primary transform transition-all duration-200 ease-in-out ${navbarOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
                                 }`}
                         ></span>
                         <span
-                            className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${navbarOpen ? "-rotate-45 delay-200" : "translate-y-1.5"
+                            className={`absolute h-0.5 w-5 bg-primary transform transition duration-300 ease-in-out ${navbarOpen ? "-rotate-45 delay-200" : "translate-y-1.5"
                                 }`}
                         ></span>
                     </div>
                 </button>
             </header>
             <nav
-                className={`fixed flex top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-gray-900 text-textPrimary bg-opacity-100 transform delay-100 transition-all duration-300 ${navbarOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+                className={`fixed flex top-0 left-0 w-full p-10 z-30 h-screen pt-24 bg-gray-900 text-textPrimary bg-opacity-100 transform delay-100 transition-all duration-300 ${navbarOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full justify-center"
                     }`}
             >
-                <ul className="w-full flex flex-col items-start">
-                    <li className="nav-li">
+                <ul className="w-full text-center flex flex-col items-center">
+                    <li className="flex w-full leading-8 list-none focus:outline-none group py-2 tracking-normal opacity-50 hover:opacity-100 transition-all duration-200 ease-in-out">
                         <a
                             href="/"
-                            className="nav-link"
+                            className="h-full w-full py-2 text-lg text-primary"
                             onClick={(e) => {
                                 e.preventDefault();
                                 setNavbarOpen(false);
@@ -79,10 +78,10 @@ function NavBarSmallScreen() {
                             Home
                         </a>
                     </li>
-                    <li className="nav-li">
+                    <li className="flex w-full leading-8 list-none focus:outline-none group py-2 tracking-normal opacity-50 hover:opacity-100 transition-all duration-200 ease-in-out">
                         <a
                             href="/"
-                            className="nav-link"
+                            className="h-full w-full py-2 text-lg text-primary"
                             onClick={(e) => {
                                 e.preventDefault();
                                 setNavbarOpen(false);
