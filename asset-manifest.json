@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.a89ed673.css",
-    "main.js": "./static/js/main.74a853fe.js",
+    "main.js": "./static/js/main.7e621fbe.js",
     "static/media/meetToon.svg": "./static/media/meetToon.2e2642a1036749acec4298fe69b5a8fe.svg",
     "static/media/banner.png": "./static/media/banner.d7bd9bf0514f95c2e835.png",
     "static/media/logo.svg": "./static/media/logo.90e393bbe4b4df7bf23a53a2c5c86dfe.svg",
@@ -75,10 +75,10 @@
     "static/media/facebook.svg": "./static/media/facebook.f4e65c96e7d1ffc2249ae852a2145b27.svg",
     "index.html": "./index.html",
     "main.a89ed673.css.map": "./static/css/main.a89ed673.css.map",
-    "main.74a853fe.js.map": "./static/js/main.74a853fe.js.map"
+    "main.7e621fbe.js.map": "./static/js/main.7e621fbe.js.map"
   },
   "entrypoints": [
     "static/css/main.a89ed673.css",
-    "static/js/main.74a853fe.js"
+    "static/js/main.7e621fbe.js"
   ]
 }
