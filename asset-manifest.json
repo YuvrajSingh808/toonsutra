@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.a89ed673.css",
-    "main.js": "./static/js/main.7e621fbe.js",
+    "main.css": "./static/css/main.c07bbb69.css",
+    "main.js": "./static/js/main.76a91bf5.js",
     "static/media/meetToon.svg": "./static/media/meetToon.2e2642a1036749acec4298fe69b5a8fe.svg",
     "static/media/banner.png": "./static/media/banner.d7bd9bf0514f95c2e835.png",
     "static/media/logo.svg": "./static/media/logo.90e393bbe4b4df7bf23a53a2c5c86dfe.svg",
@@ -48,20 +48,23 @@
     "static/media/QuantumandWoody.png": "./static/media/QuantumandWoody.3b00b88b2d118918357d.png",
     "static/media/MarcusNispel'sTheChosen.png": "./static/media/MarcusNispel'sTheChosen.65bbf384f99ab8ca7d09.png",
     "static/media/Rai.png": "./static/media/Rai.8ead1050262aafb354b3.png",
-    "static/media/1.png": "./static/media/1.209a862edb030bd3393c.png",
+    "static/media/1.png": "./static/media/1.b2535813e0a48332bc75.png",
     "static/media/Virulents.png": "./static/media/Virulents.29949dd700b8df442745.png",
     "static/media/X-OManowar.png": "./static/media/X-OManowar.63d7a8cab1eb9f7a7445.png",
     "static/media/TheDeathDefyingDr.Mirage.png": "./static/media/TheDeathDefyingDr.Mirage.a5daf8249eba67045a95.png",
     "static/media/MumbaiMacguffin.png": "./static/media/MumbaiMacguffin.c5404280fb547c61c09a.png",
+    "static/media/2.png": "./static/media/2.28680795d6d577fc2804.png",
     "static/media/DeepakChopra'sBuddha.png": "./static/media/DeepakChopra'sBuddha.dd6fe0ed9a582d3811ec.png",
     "static/media/webtoonsPrev.png": "./static/media/webtoonsPrev.b0ab41a5ad29f5368cc1.png",
     "static/media/5.png": "./static/media/5.6877f9b914c70fa9198b.png",
-    "static/media/2.png": "./static/media/2.7825b0b6fb40a02bf7df.png",
     "static/media/Imperium.png": "./static/media/Imperium.b4f14fb26a3211af3028.png",
+    "static/media/7.jpeg": "./static/media/7.f4b685fd80cc1a950988.jpeg",
     "static/media/6.png": "./static/media/6.0ddd646cd1c7c8600c78.png",
+    "static/media/9.jpeg": "./static/media/9.9d9eca7d9ca5081ab68d.jpeg",
     "static/media/LongLost.png": "./static/media/LongLost.06c940545e257605153d.png",
+    "static/media/8.jpeg": "./static/media/8.10926f8602f8e2d71a8c.jpeg",
+    "static/media/3.png": "./static/media/3.e7c800939da202f93699.png",
     "static/media/4.png": "./static/media/4.68fb340772c9ff771b5c.png",
-    "static/media/3.png": "./static/media/3.7b6376bfca21f540d8c3.png",
     "static/media/punith.png": "./static/media/punith.3fbb65bd51f3122c488a.png",
     "static/media/ashwin.png": "./static/media/ashwin.191a17087486b17d04fe.png",
     "static/media/michelle.png": "./static/media/michelle.2b93a85d53b68bf1cefb.png",
@@ -71,14 +74,18 @@
     "static/media/Website-Metadata.csv": "./static/media/Website-Metadata.9608dcf56e0e2737acb3.csv",
     "static/media/rakesh.png": "./static/media/rakesh.3556c7757dde17b46f6e.png",
     "static/media/instagram.svg": "./static/media/instagram.4859dba1c1c63d4cdf053a3672636129.svg",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/twitter.svg": "./static/media/twitter.50f73d90b17905eb3c53685922d02a48.svg",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/facebook.svg": "./static/media/facebook.f4e65c96e7d1ffc2249ae852a2145b27.svg",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.a89ed673.css.map": "./static/css/main.a89ed673.css.map",
-    "main.7e621fbe.js.map": "./static/js/main.7e621fbe.js.map"
+    "main.c07bbb69.css.map": "./static/css/main.c07bbb69.css.map",
+    "main.76a91bf5.js.map": "./static/js/main.76a91bf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a89ed673.css",
-    "static/js/main.7e621fbe.js"
+    "static/css/main.c07bbb69.css",
+    "static/js/main.76a91bf5.js"
   ]
 }
