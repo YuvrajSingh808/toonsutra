@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.bfd13745.css",
-    "main.js": "./static/js/main.69e077d7.js",
+    "main.js": "./static/js/main.39d45323.js",
     "static/media/gif.gif": "./static/media/gif.609f9faf7e8314614b9c.gif",
     "static/media/banner.png": "./static/media/banner.d7bd9bf0514f95c2e835.png",
     "static/media/logo.svg": "./static/media/logo.90e393bbe4b4df7bf23a53a2c5c86dfe.svg",
@@ -71,7 +71,7 @@
     "static/media/sharad.png": "./static/media/sharad.e5be23ed63c63a246e47.png",
     "static/media/navin.png": "./static/media/navin.170af33b2a04359ef2be.png",
     "static/media/nilesh.png": "./static/media/nilesh.8765ec4ce8bbd5393855.png",
-    "static/media/Website-Metadata.csv": "./static/media/Website-Metadata.9608dcf56e0e2737acb3.csv",
+    "static/media/Website-Metadata.csv": "./static/media/Website-Metadata.01162b882f09a735faec.csv",
     "static/media/rakesh.png": "./static/media/rakesh.3556c7757dde17b46f6e.png",
     "static/media/instagram.svg": "./static/media/instagram.4859dba1c1c63d4cdf053a3672636129.svg",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -82,10 +82,10 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.bfd13745.css.map": "./static/css/main.bfd13745.css.map",
-    "main.69e077d7.js.map": "./static/js/main.69e077d7.js.map"
+    "main.39d45323.js.map": "./static/js/main.39d45323.js.map"
   },
   "entrypoints": [
     "static/css/main.bfd13745.css",
-    "static/js/main.69e077d7.js"
+    "static/js/main.39d45323.js"
   ]
 }
